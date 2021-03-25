@@ -20,18 +20,26 @@
 
         <div class="row mt-3">
             <div class="row mb-2">
-                <div class="d-flex justify-content-center"><h1>Menu</h1></div>
+                <div class="d-flex justify-content-center"><h1>Dados cadastrados com sucesso!</h1></div>
             </div>
          </div>
-         <div class="row mt-3">
-            <a href="{{route('formCadastro')}}" class="btn btn-primary btn-lg" >Cadastrar usuário</a>
-        <div class="row mt-2">
-            <a href="{{route('list')}}" class="btn btn-primary btn-lg" >Listar usuários</a>
-        </div>
-        <div class="roll mt-4">
+         <div class="row mt-1">
+            <p class="text-center"><h2>Nome: {{$nome}}</h2></p>
+         </div>
+         <div class="row mt-1">
+            <p class="text-center"><h2>Data de nascimento: {{$data}}</h2> </p>
+         </div>
+         <div class="row mt-1">
+            <p class="text-center"><h2>Senha: {{$senha}}</h2> </p>
+         </div>
+         <div class="row mt-1">
+            <p class="text-center"><h2>Matrícula: {{$matricula}}</h2> </p>
+         </div>
+
+         <a href="{{route('formCadastro')}}" class="btn btn-primary" > <h4>Voltar</h4></a></div>
+         <div class="roll mt-4">
             <h4 class="text-center">Todos os direitos reservados - Vinicius Santos Goes - 2021</h4>
         </div>
-
     </div>
 </body>
 </html>

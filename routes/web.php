@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('menu');
 
 Route::get('/cadastro', 'App\Http\Controllers\CadastroController@cadastro')->name('formCadastro');
+Route::post('/cadastroCompleto', 'App\Http\Controllers\CadastroController@completo')->name('cadastropronto');
+Route::get('/listarUsuarios', 'App\Http\Controllers\CadastroController@listusuarios')->name('list');
