@@ -17,4 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/cadastro', 'App\Http\Controllers\CadastroController@cadastro');
+Route::get('/cadastro', 'App\Http\Controllers\CadastroController@cadastro')->name('formCadastro');
