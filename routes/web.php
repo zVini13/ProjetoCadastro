@@ -20,3 +20,4 @@ Route::get('/', function () {
 Route::get('/cadastro', 'App\Http\Controllers\CadastroController@cadastro')->name('formCadastro');
 Route::post('/cadastroCompleto', 'App\Http\Controllers\CadastroController@completo')->name('cadastropronto');
 Route::get('/listarUsuarios', 'App\Http\Controllers\CadastroController@listusuarios')->name('list');
+Route::post('/salvar', 'App\Http\Controllers\CadastroController@salva')->name('salvarUsuario');

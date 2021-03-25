@@ -12,7 +12,8 @@
 <style>
     body{
         font-family: 'Oswald', sans-serif;
-        background-color: aliceblue;
+        /* background-color: aliceblue; */
+        background-image: url('https://static-cse.canva.com/blob/184311/Fundo-de-Arco-%C3%8Dris-para-Zoom-1.png');
     }
     h2{
         font-size: 18px;
@@ -39,7 +40,7 @@
         </div>
         <div class="mb-3">
           <label for="data" class="form-label">Data de Nascimento:</label>
-          <input type="date" class="form-control" id="data" name= "data">
+          <input type="date" class="form-control" id="data" name= "data_nascimento">
         </div>
         <div class="mb-3">
             <label for="senha" class="form-label">Senha:</label>

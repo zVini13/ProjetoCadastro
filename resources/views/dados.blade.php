@@ -12,7 +12,8 @@
 <style>
     body{
         font-family: 'Oswald', sans-serif;
-        background-color: aliceblue;
+        /* background-color: aliceblue; */
+        background-image: url('https://static-cse.canva.com/blob/184311/Fundo-de-Arco-%C3%8Dris-para-Zoom-1.png');
     }
 </style>
 <body>
@@ -24,16 +25,16 @@
             </div>
          </div>
          <div class="row mt-1">
-            <p class="text-center"><h2>Nome: {{$nome}}</h2></p>
+            <p class="text-center"><h2>Nome: {{$usuario->nome}}</h2></p>
          </div>
          <div class="row mt-1">
-            <p class="text-center"><h2>Data de nascimento: {{$data}}</h2> </p>
+            <p class="text-center"><h2>Data de nascimento: {{$usuario->data_nascimento}}</h2> </p>
          </div>
          <div class="row mt-1">
-            <p class="text-center"><h2>Senha: {{$senha}}</h2> </p>
+            <p class="text-center"><h2>Senha: {{$usuario->senha}}</h2> </p>
          </div>
          <div class="row mt-1">
-            <p class="text-center"><h2>Matrícula: {{$matricula}}</h2> </p>
+            <p class="text-center"><h2>Matrícula: {{$usuario->matricula}}</h2> </p>
          </div>
 
          <a href="{{route('formCadastro')}}" class="btn btn-primary" > <h4>Voltar</h4></a></div>

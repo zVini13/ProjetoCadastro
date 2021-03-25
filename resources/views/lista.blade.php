@@ -12,7 +12,8 @@
 <style>
     body{
         font-family: 'Oswald', sans-serif;
-        background-color: aliceblue;
+        /* background-color: aliceblue; */
+        background-image: url('https://static-cse.canva.com/blob/184311/Fundo-de-Arco-%C3%8Dris-para-Zoom-1.png');
     }
 </style>
 <body>
@@ -26,6 +27,7 @@
              <table class="table">
                 <thead>
                   <tr>
+                    <th scope="col">ID</th>
                     <th scope="col">Nome</th>
                     <th scope="col">Data de Nascimento</th>
                     <th scope="col">Senha</th>
@@ -33,12 +35,15 @@
                   </tr>
                 </thead>
                 <tbody>
+                  @foreach ($usuarios as $item)
                   <tr>
-                    <td scope="row">Vinicius Santos Goes (exemplo)</td>
-                    <td>29/07/2003 (exemplo)</td>
-                    <td>2136 (exemplo)</td>
-                    <td>78642438756897598 (exemplo)</td>
+                    <td>{{$item->id}}</td>
+                    <td>{{$item->nome}}</td>
+                    <td>{{$item->data_nascimento}}</td>
+                    <td>{{$item->senha}}</td>
+                    <td>{{$item->matricula}}</td>
                   </tr>
+                  @endforeach
                 </tbody>
               </table>
 

@@ -12,7 +12,8 @@
 <style>
     body{
         font-family: 'Oswald', sans-serif;
-        background-color: aliceblue;
+        /* background-color: aliceblue; */
+        background-image: url('https://static-cse.canva.com/blob/184311/Fundo-de-Arco-%C3%8Dris-para-Zoom-1.png');
     }
 </style>
 <body>
@@ -25,7 +26,7 @@
          </div>
          <div class="row mt-3">
             <a href="{{route('formCadastro')}}" class="btn btn-primary btn-lg" >Cadastrar usuário</a>
-        <div class="row mt-2">
+        <div class="row mt-3">
             <a href="{{route('list')}}" class="btn btn-primary btn-lg" >Listar usuários</a>
         </div>
         <div class="roll mt-4">
