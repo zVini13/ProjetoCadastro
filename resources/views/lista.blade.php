@@ -32,6 +32,7 @@
                     <th scope="col">Data de Nascimento</th>
                     <th scope="col">Senha</th>
                     <th scope="col">Matrícula</th>
+                    <th scope="col">Ações</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -42,6 +43,12 @@
                     <td>{{$item->data_nascimento}}</td>
                     <td>{{$item->senha}}</td>
                     <td>{{$item->matricula}}</td>
+                    <td>
+                        <a href="{{route('editusuario', $item->id )}}" class="btn btn-primary"> Editar </a>
+                        <a href="{{route('excluirusuario', $item->id )}}" class="btn btn-primary"> Apagar </a>
+
+                    </td>
+
                   </tr>
                   @endforeach
                 </tbody>

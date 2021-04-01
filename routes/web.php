@@ -21,3 +21,6 @@ Route::get('/cadastro', 'App\Http\Controllers\CadastroController@cadastro')->nam
 Route::post('/cadastroCompleto', 'App\Http\Controllers\CadastroController@completo')->name('cadastropronto');
 Route::get('/listarUsuarios', 'App\Http\Controllers\CadastroController@listusuarios')->name('list');
 Route::post('/salvar', 'App\Http\Controllers\CadastroController@salva')->name('salvarUsuario');
+Route::get('/usuario/editar/{id}', 'App\Http\Controllers\CadastroController@editarUsuario')->name('editusuario');
+Route::post('/salvar_edicao', 'App\Http\Controllers\CadastroController@salvaedicao')->name('salvaredit');
+Route::get('/usuario/excluir/{id}', 'App\Http\Controllers\CadastroController@excluirUsuario')->name('excluirusuario');
