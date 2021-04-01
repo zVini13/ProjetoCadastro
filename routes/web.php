@@ -24,3 +24,13 @@ Route::post('/salvar', 'App\Http\Controllers\CadastroController@salva')->name('s
 Route::get('/usuario/editar/{id}', 'App\Http\Controllers\CadastroController@editarUsuario')->name('editusuario');
 Route::post('/salvar_edicao', 'App\Http\Controllers\CadastroController@salvaedicao')->name('salvaredit');
 Route::get('/usuario/excluir/{id}', 'App\Http\Controllers\CadastroController@excluirUsuario')->name('excluirusuario');
+
+//endereço
+
+Route::get('/cadastro-endereco', 'App\Http\Controllers\CadastroController@cadastroendereco')->name('cadastroendereco');
+Route::post('/cadastro-completo', 'App\Http\Controllers\CadastroController@cadastrocompleto')->name('cadastrocompletoend');
+Route::get('/listar-enderecos', 'App\Http\Controllers\CadastroController@listarenderecos')->name('listarenderecos');
+Route::post('/salvar-endereco', 'App\Http\Controllers\CadastroController@salvarendereco')->name('salvarendereco');
+Route::get('/endereco/editar/{id}', 'App\Http\Controllers\CadastroController@editarendereco')->name('editendereco');
+Route::post('/salvar_edicao_endereco', 'App\Http\Controllers\CadastroController@salvaedicaoend')->name('salvareditend');
+Route::get('/endereco/excluir/{id}', 'App\Http\Controllers\CadastroController@excluirendereco')->name('excluirendereco');

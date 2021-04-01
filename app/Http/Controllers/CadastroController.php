@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Usuario;
+use App\Models\Endereco;
+
 
 class CadastroController extends Controller
 {
@@ -58,4 +60,51 @@ class CadastroController extends Controller
         $usuario->update();
         return redirect(route('list'));
     }
-}
+
+    public function cadastroendereco(){
+        return view ('cadastroendereco');
+
+
+    }
+    public function cadastrocompleto(Request $request){
+        $endereco = new Endereco;
+        $endereco->cep = $request->cep;
+        $endereco->logradouro = $request->logradouro;
+        $endereco->numero = $request->numero;
+        $endereco->complemento = $request->complemento; 
+        $endereco->bairro = $request->bairro;
+        $endereco->cidade = $request->cidade;
+        $endereco->estado = $request->estado; 
+        $endereco->save();
+        return view('dadosendereco', compact('endereco'));
+    }
+
+    public function listarenderecos(){
+        $enderecos = Endereco::orderBy("id", "asc")->get();
+        return view ('listaendereco', compact ('enderecos'));
+
+    }
+    public function editarendereco($id){
+        $endereco = Endereco::where('id', $id)->first();
+
+        return view('editend', compact('endereco'));
+    }
+    public function salvaedicaoend(Request $request){
+        $endereco = Endereco::where('id', $request->id)->first();
+        $endereco->cep = $request->cep;
+        $endereco->logradouro = $request->logradouro;
+        $endereco->numero = $request->numero;
+        $endereco->complemento = $request->complemento;
+        $endereco->bairro = $request->bairro;
+        $endereco->cidade = $request->cidade;
+        $endereco->estado = $request->estado;
+
+        $endereco->update();
+        return redirect(route('listarenderecos'));
+    }
+    public function excluirendereco($id){
+        Endereco::destroy($id);
+        return redirect(route('listarenderecos'));
+
+    }
+    }
