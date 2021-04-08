@@ -34,3 +34,10 @@ Route::post('/salvar-endereco', 'App\Http\Controllers\CadastroController@salvare
 Route::get('/endereco/editar/{id}', 'App\Http\Controllers\CadastroController@editarendereco')->name('editendereco');
 Route::post('/salvar_edicao_endereco', 'App\Http\Controllers\CadastroController@salvaedicaoend')->name('salvareditend');
 Route::get('/endereco/excluir/{id}', 'App\Http\Controllers\CadastroController@excluirendereco')->name('excluirendereco');
+
+Route::prefix('usuario')->group(function () { 
+    //ROTA: /usuario/create
+    //rotas padrão
+    Route::get('create', 'App\Http\Controllers\NovoController@create')->name('createUsuario');
+    Route::post('save', 'App\Http\Controllers\NovoController@save')->name('saveUsuario');
+});

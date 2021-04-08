@@ -36,6 +36,10 @@
         <div class="row mt-3">
             <a href="{{route('listarenderecos')}}" class="btn btn-primary btn-lg" >Listar endereços</a>
         </div>
+        <div class="row mt-3">
+            <a href="{{route('createUsuario')}}" class="btn btn-primary btn-lg" >Criar Usuário com Endereço</a>
+        </div>
+
         <div class="roll mt-4">
             <h4 class="text-center">Todos os direitos reservados - Vinicius Santos Goes - 2021</h4>
         </div>
