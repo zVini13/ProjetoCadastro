@@ -41,7 +41,7 @@
         </div>
 
         <div class="roll mt-4">
-            <h4 class="text-center">Todos os direitos reservados - Vinicius Santos Goes - 2021</h4>
+            <h4 class="text-center">Todos os direitos reservados - Vinicius Santos Goes e Luca Abreu - 2021</h4>
         </div>
     </div>
 </body>
